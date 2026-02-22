@@ -4,35 +4,155 @@ title = 'Erom Labs Ltd'
 disableKinds = ['taxonomy', 'term']
 
 [params]
-  description = 'Cloud infrastructure, automation systems, and integration services for logistics, energy, and professional services.'
-  heroSummary = 'We help businesses move faster with cloud infrastructure, workflow automation, and system integration — built for logistics, financial services, energy, and professional services.'
-  headline = 'Erom Labs: Automate Your Future. Cloud Solutions Redefined.'
-  ctaText = 'Explore Our Platform'
-  ctaLink = '#services'
+  description = 'Automation systems and cloud engineering for logistics and freight operations.'
+  headline = 'Logistics RFQ automation and cloud systems, built to move freight faster.'
+  heroSummary = 'We design RFQ workflows, integrations, and cloud platforms that cut response times, remove manual steps, and keep freight teams in control.'
+  heroPill = 'Logistics automation studio'
+  ctaPrimaryText = 'Start an RFQ'
+  ctaPrimaryLink = '#rfq'
+  ctaSecondaryText = 'Talk to us'
+  ctaSecondaryLink = '#contact'
+  solutionsKicker = 'Solutions'
+  solutionsLead = 'We focus on high-impact automation that reduces turnaround time and keeps stakeholders aligned across sales, operations, and carrier partners.'
+  industriesLead = 'Freight workflows touch multiple industries. We bring a logistics-first mindset and cloud automation expertise to each one.'
+  processKicker = 'Delivery approach'
+  processLead = 'A short, structured engagement designed to get a working RFQ flow into production quickly.'
+  highlightsLead = 'Selected outcomes from founder-led engagements delivered prior to Erom Labs.'
+  rfqLead = 'Submit your RFQ details and we will respond by email with a structured quote template and recommended next steps.'
+  faqLead = 'Short answers to common questions about timing, tooling, and how we work.'
+  contactLead = 'Tell us about your RFQ workflow goals and we will map out the next steps.'
   companyNumber = '16993036'
   contactEmail = 'info@eromlabs.com'
   contactPhone = '+44 7944961772'
   contactAddress = 'Welwyn Garden City, Hertfordshire, United Kingdom'
-  about = 'Erom Labs is a UK-registered technology consultancy with operations in Lagos & Abuja, Nigeria. We specialise in cloud infrastructure, process automation, and system integration for companies in logistics, energy, financial services and professional services. Our team brings deep expertise in Google Cloud Platform, ERP integration, and building the automation that lets your operations scale.'
+  formspreeEndpoint = 'https://formspree.io/f/xbdazwpz'
+
+  proofPoints = [
+    'UK-registered consultancy focused on logistics automation',
+    'Founder brings 12+ years in cloud and workflow engineering',
+    'Specialists in GCP, Kubernetes, and integration-heavy systems'
+  ]
+
+  heroBullets = [
+    'RFQ intake, validation, and routing',
+    'Carrier response tracking and SLA visibility',
+    'ERP/CRM integrations and analytics'
+  ]
 
   [[params.stats]]
-    label = 'Secure Connectivity'
-    value = '100%'
+    label = 'Deployment cycle time'
+    value = '-83%'
   [[params.stats]]
-    label = 'Efficiency Boost'
-    value = '+40%'
+    label = 'Service availability'
+    value = '99.95%+'
   [[params.stats]]
-    label = 'Cost Reduction'
-    value = '25%'
+    label = 'Ops effort'
+    value = '40-60% less'
 
   [[params.services]]
-    title = 'Cloud Infrastructure'
-    description = 'Architecture and deployment on Google Cloud Platform — Google Kubernetes Engine, Cloud Run, serverless functions, managed databases, and cost-optimised environments built for production workloads.'
+    title = 'RFQ Workflow Automation'
+    description = 'Design and build an RFQ flow that captures details once, routes to the right team, and produces consistent quote-ready data.'
+    deliverables = ['RFQ intake & validation', 'Routing rules & SLA visibility', 'Quote template generation']
 
   [[params.services]]
-    title = 'Automation Systems'
-    description = 'Workflow automation, document processing, and API integration that eliminates manual work. From RFQ processing to ERP data flows, we build systems that run themselves.'
+    title = 'Freight Systems Integration'
+    description = 'Connect ERPs, CRMs, TMS platforms, and carrier data into a single operational view without manual handoffs.'
+    deliverables = ['API & EDI integration', 'Data normalization', 'Operational dashboards']
 
   [[params.services]]
-    title = 'DevOps & Integration'
-    description = 'CI/CD pipelines, container orchestration, infrastructure as code, and system integration. We connect your tools and keep your deployments reliable.'
+    title = 'Cloud Reliability & DevOps'
+    description = 'Build secure, observable infrastructure that keeps RFQ and quoting systems available under load.'
+    deliverables = ['GCP architecture', 'CI/CD & IaC', 'Security & monitoring']
+
+  industries = [
+    'Freight & logistics operators',
+    'Energy & industrial supply chains',
+    'Financial services operations',
+    'Professional services firms'
+  ]
+
+  [[params.processSteps]]
+    step = '01'
+    title = 'Discover'
+    description = 'Map the current RFQ flow, systems, and handoffs to uncover bottlenecks and data gaps.'
+
+  [[params.processSteps]]
+    step = '02'
+    title = 'Design'
+    description = 'Co-design the workflow, validation rules, and integrations required for consistent quotes.'
+
+  [[params.processSteps]]
+    step = '03'
+    title = 'Automate'
+    description = 'Build the RFQ intake, routing, and reporting with clear ownership and audit trails.'
+
+  [[params.processSteps]]
+    step = '04'
+    title = 'Measure'
+    description = 'Track turnaround time, response quality, and capacity to continuously improve.'
+
+  aboutLead = 'Erom Labs is a newly formed UK consultancy focused on freight operations automation. While the company is new, the founder has delivered complex cloud and workflow transformations across logistics, banking, and telecom environments.'
+  aboutPoints = [
+    'UK-registered, delivery teams in the UK and Nigeria',
+    '12+ years in automation and cloud operations',
+    'Deep experience with GCP, Kubernetes, and integration-heavy systems'
+  ]
+  aboutCardIntro = 'Credentials that back our delivery approach:'
+  aboutCardBullets = [
+    'Google Cloud Professional Data Engineer (2025)',
+    'Google Cloud Professional Cloud Architect (2022)',
+    'AWS Solutions Architect Associate (2021)',
+    'CKAD (2020) and DevNet Associate (2020)'
+  ]
+
+  [[params.highlights]]
+    title = 'Financial services platform modernization'
+    summary = 'Built and operated a GKE platform with CI/CD, service mesh policies, and Vault-based secrets handling to improve reliability and release speed.'
+    outcome = 'Outcome: 83% faster deployments, 99.95%+ availability, and reduced container costs.'
+
+  [[params.highlights]]
+    title = 'Telecom and banking automation at scale'
+    summary = 'Standardised infrastructure with Terraform and automated Kubernetes delivery pipelines across EMEA and APAC teams.'
+    outcome = 'Outcome: 40-60% reduction in infra/ops effort through automation and reuse.'
+
+  [[params.highlights]]
+    title = 'Multi-affiliate integration programme'
+    summary = 'Led integration and validation for a mobile web/video platform across six affiliates, aligning teams on a consistent rollout process.'
+    outcome = 'Outcome: faster rollout readiness with improved cross-team delivery alignment.'
+
+  [[params.caseStudies]]
+    title = 'Financial services platform modernization'
+    summary = 'Built and operated a GKE platform with CI/CD, service mesh policies, and Vault-based secrets handling to improve reliability and release speed.'
+    outcome = 'Outcome: 83% faster deployments, 99.95%+ availability, and reduced container costs.'
+
+  [[params.caseStudies]]
+    title = 'Telecom and banking automation at scale'
+    summary = 'Standardised infrastructure with Terraform and automated Kubernetes delivery pipelines across EMEA and APAC teams.'
+    outcome = 'Outcome: 40-60% reduction in infra/ops effort through automation and reuse.'
+
+  [[params.caseStudies]]
+    title = 'Multi-affiliate integration programme'
+    summary = 'Led integration and validation for a mobile web/video platform across six affiliates, aligning teams on a consistent rollout process.'
+    outcome = 'Outcome: faster rollout readiness with improved cross-team delivery alignment.'
+
+  rfqBenefits = [
+    'A structured RFQ template prepared by our team',
+    'Estimated scope, timeline, and integration requirements',
+    'Clear next steps for a pilot or discovery workshop'
+  ]
+
+  [[params.faqs]]
+    question = 'How quickly can an RFQ workflow be live?'
+    answer = 'A discovery-to-pilot engagement typically takes 4-6 weeks, depending on integrations and data readiness.'
+
+  [[params.faqs]]
+    question = 'Do you integrate with existing TMS or ERP tools?'
+    answer = 'Yes. We design around your existing systems and can integrate via API, EDI, or structured data exports.'
+
+  [[params.faqs]]
+    question = 'Can you support multi-region operations?'
+    answer = 'Yes. We build cloud infrastructure and workflows that support global teams with regional compliance needs.'
+
+  [[params.faqs]]
+    question = 'What happens after I submit an RFQ?'
+    answer = 'We review the details, send a structured quote template by email, and propose a short discovery session.'

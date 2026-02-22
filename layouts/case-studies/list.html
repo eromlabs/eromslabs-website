@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="kicker">Case studies</p>
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.lead }}
+    <p class="section-lead">{{ .Params.lead }}</p>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="case-grid">
+      {{ range .Site.Params.caseStudies }}
+      <article class="case-card">
+        <div class="case-header">
+          <h3>{{ .title }}</h3>
+          <span class="case-tag">Anonymized</span>
+        </div>
+        <p class="case-summary">{{ .summary }}</p>
+        <div class="case-outcome">{{ .outcome }}</div>
+      </article>
+      {{ end }}
+    </div>
+    <div class="page-note">Looking for a specific logistics workflow example? Email {{ .Site.Params.contactEmail }} and we can share more detail under NDA.</div>
+  </div>
+</section>
+
+{{ end }}

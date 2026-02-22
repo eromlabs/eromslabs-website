@@ -1,71 +1,95 @@
 {{ define "main" }}
 
-<!-- Hero Section -->
-<section class="hero">
-  <!-- Background decorations -->
-  <div class="hero-bg">
-    <img src="/images/cloud-large.svg" alt="" class="cloud cloud-1" aria-hidden="true">
-    <img src="/images/cloud-small.svg" alt="" class="cloud cloud-2" aria-hidden="true">
-    <img src="/images/cloud-small.svg" alt="" class="cloud cloud-3" aria-hidden="true">
-    <img src="/images/sparkle.svg" alt="" class="sparkle sparkle-1" aria-hidden="true">
-    <img src="/images/sparkle.svg" alt="" class="sparkle sparkle-2" aria-hidden="true">
-    <img src="/images/sparkle.svg" alt="" class="sparkle sparkle-3" aria-hidden="true">
-  </div>
-
-  <!-- Hero Content -->
-  <div class="hero-content">
-    <h1>{{ .Site.Params.headline }}</h1>
-    <p class="subtitle">{{ .Site.Params.heroSummary }}</p>
-    <a href="{{ .Site.Params.ctaLink }}" class="cta-btn">{{ .Site.Params.ctaText }}</a>
-  </div>
-
-  <!-- Dashboard Mockup -->
-  <div class="dashboard-mockup">
-    <div class="dashboard-window">
-      <div class="window-header">
-        <span class="window-dot red"></span>
-        <span class="window-dot yellow"></span>
-        <span class="window-dot green"></span>
+<section class="hero" id="top">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="pill">{{ .Site.Params.heroPill }}</span>
+      <h1>{{ .Site.Params.headline }}</h1>
+      <p class="lead">{{ .Site.Params.heroSummary }}</p>
+      <div class="hero-ctas">
+        <a href="{{ .Site.Params.ctaPrimaryLink }}" class="btn primary">{{ .Site.Params.ctaPrimaryText }}</a>
+        <a href="{{ .Site.Params.ctaSecondaryLink }}" class="btn ghost">{{ .Site.Params.ctaSecondaryText }}</a>
       </div>
-      <div class="window-content">
-        <div class="dashboard-grid">
-          {{ range .Site.Params.stats }}
-          <div class="dashboard-card">
-            <div class="label">{{ .label }}</div>
-            <div class="value">{{ .value }}</div>
-          </div>
-          {{ end }}
-        </div>
-        <div class="dashboard-chart">
-          <div class="chart-bar"></div>
-          <div class="chart-bar"></div>
-          <div class="chart-bar"></div>
-          <div class="chart-bar"></div>
-          <div class="chart-bar"></div>
-          <div class="chart-bar"></div>
-        </div>
+      <div class="hero-proof">
+        {{ range .Site.Params.proofPoints }}
+        <div class="proof-item"><span class="proof-dot"></span>{{ . }}</div>
+        {{ end }}
       </div>
     </div>
-  </div>
-
-  <!-- Floating Stat Cards -->
-  <div class="stat-cards">
-    {{ range .Site.Params.stats }}
-    <div class="stat-card">
-      <div class="stat-value">{{ .value }}</div>
-      <div class="stat-label">{{ .label }}</div>
+    <div class="hero-panel">
+      <div class="panel-header">
+        <span>Outcome Snapshot</span>
+        <span class="tag">Founder experience</span>
+      </div>
+      <div class="panel-metrics">
+        {{ range .Site.Params.stats }}
+        <div class="metric">
+          <div class="metric-value">{{ .value }}</div>
+          <div class="metric-label">{{ .label }}</div>
+        </div>
+        {{ end }}
+      </div>
+      <div class="panel-divider"></div>
+      <ul class="panel-list">
+        {{ range .Site.Params.heroBullets }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
     </div>
-    {{ end }}
   </div>
 </section>
 
-<!-- Services Section -->
-<section class="services" id="services">
+<section class="section" id="solutions">
   <div class="container">
-    <h2>What We Do</h2>
-    <div class="cards">
+    <div class="section-head">
+      <p class="kicker">{{ .Site.Params.solutionsKicker }}</p>
+      <h2>Solutions built for freight operations</h2>
+      <p class="section-lead">{{ .Site.Params.solutionsLead }}</p>
+    </div>
+    <div class="cards-grid">
       {{ range .Site.Params.services }}
-      <div class="card">
+      <article class="card">
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+        {{ if .deliverables }}
+        <ul class="card-list">
+          {{ range .deliverables }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted" id="industries">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Where we work best</p>
+      <h2>Industries we understand</h2>
+      <p class="section-lead">{{ .Site.Params.industriesLead }}</p>
+    </div>
+    <div class="chip-grid">
+      {{ range .Site.Params.industries }}
+      <div class="chip">{{ . }}</div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">{{ .Site.Params.processKicker }}</p>
+      <h2>From discovery to a live RFQ flow</h2>
+      <p class="section-lead">{{ .Site.Params.processLead }}</p>
+    </div>
+    <div class="process-grid">
+      {{ range .Site.Params.processSteps }}
+      <div class="process-step">
+        <span class="step-index">{{ .step }}</span>
         <h3>{{ .title }}</h3>
         <p>{{ .description }}</p>
       </div>
@@ -74,23 +98,252 @@
   </div>
 </section>
 
-<!-- About Section -->
-<section class="about" id="about">
-  <div class="container">
-    <h2>About Us</h2>
-    <p>{{ .Site.Params.about }}</p>
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div>
+      <p class="kicker">About Erom Labs</p>
+      <h2>New company, senior delivery experience</h2>
+      <p class="section-lead">{{ .Site.Params.aboutLead }}</p>
+      <div class="about-points">
+        {{ range .Site.Params.aboutPoints }}
+        <div class="about-point"><span class="about-dot"></span>{{ . }}</div>
+        {{ end }}
+      </div>
+    </div>
+    <div class="about-card">
+      <h3>Founder credentials</h3>
+      <p>{{ .Site.Params.aboutCardIntro }}</p>
+      <ul>
+        {{ range .Site.Params.aboutCardBullets }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
   </div>
 </section>
 
-<!-- Contact Section -->
-<section class="contact" id="contact">
+<section class="section section-muted" id="highlights">
   <div class="container">
-    <h2>Get In Touch</h2>
-    <div class="contact-details">
-      <p><strong>Email:</strong> <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></p>
-      <p><strong>Phone:</strong> <a href="tel:{{ .Site.Params.contactPhone }}">{{ .Site.Params.contactPhone }}</a></p>
-      <p><strong>Address:</strong> {{ .Site.Params.contactAddress }}</p>
+    <div class="section-head">
+      <p class="kicker">Representative experience</p>
+      <h2>Founder engagement highlights (anonymized)</h2>
+      <p class="section-lead">{{ .Site.Params.highlightsLead }}</p>
     </div>
+    <div class="case-grid">
+      {{ range .Site.Params.highlights }}
+      <article class="case-card">
+        <div class="case-header">
+          <h3>{{ .title }}</h3>
+          <span class="case-tag">Anonymized</span>
+        </div>
+        <p class="case-summary">{{ .summary }}</p>
+        <div class="case-outcome">{{ .outcome }}</div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section-accent" id="rfq">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">RFQ wizard</p>
+      <h2>Request a freight quote in minutes</h2>
+      <p class="section-lead">{{ .Site.Params.rfqLead }}</p>
+    </div>
+    <div class="rfq-grid">
+      <div class="rfq-panel">
+        <h3>What you'll receive</h3>
+        <ul>
+          {{ range .Site.Params.rfqBenefits }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        <div class="rfq-note">We respond by email with a tailored scope, timeline, and next steps.</div>
+      </div>
+      <form class="wizard" data-wizard action="{{ .Site.Params.formspreeEndpoint }}" method="POST">
+        <input type="hidden" name="_subject" value="New RFQ Submission">
+        <input type="hidden" name="rfq_summary" id="rfq-summary">
+
+        <div class="wizard-progress">
+          <span class="progress-label">Step <strong data-step-label>1</strong> of <strong data-step-total>4</strong></span>
+          <div class="progress-bar"><span data-progress-bar></span></div>
+        </div>
+
+        <div class="wizard-step" data-step="1">
+          <h3>Tell us what you need</h3>
+          <div class="field-grid">
+            <div class="field">
+              <label for="rfq-name">Full name</label>
+              <input id="rfq-name" name="name" type="text" data-field data-label="Name" required>
+            </div>
+            <div class="field">
+              <label for="rfq-email">Work email</label>
+              <input id="rfq-email" name="email" type="email" data-field data-label="Email" required>
+            </div>
+            <div class="field">
+              <label for="rfq-company">Company</label>
+              <input id="rfq-company" name="company" type="text" data-field data-label="Company" required>
+            </div>
+            <div class="field">
+              <label for="rfq-role">Role</label>
+              <input id="rfq-role" name="role" type="text" data-field data-label="Role">
+            </div>
+          </div>
+          <div class="option-group">
+            <p class="option-label">I'm looking for</p>
+            <label class="option">
+              <input type="radio" name="request_type" value="RFQ" data-field data-label="Request type" checked>
+              RFQ workflow
+            </label>
+            <label class="option">
+              <input type="radio" name="request_type" value="Automation" data-field data-label="Request type">
+              Automation / integration help
+            </label>
+            <label class="option">
+              <input type="radio" name="request_type" value="General" data-field data-label="Request type">
+              General inquiry
+            </label>
+          </div>
+        </div>
+
+        <div class="wizard-step" data-step="2">
+          <h3>Shipment details</h3>
+          <div class="field-grid">
+            <div class="field">
+              <label for="rfq-origin">Origin</label>
+              <input id="rfq-origin" name="origin" type="text" data-field data-label="Origin" placeholder="City, Country" required>
+            </div>
+            <div class="field">
+              <label for="rfq-destination">Destination</label>
+              <input id="rfq-destination" name="destination" type="text" data-field data-label="Destination" placeholder="City, Country" required>
+            </div>
+            <div class="field">
+              <label for="rfq-cargo">Cargo type</label>
+              <input id="rfq-cargo" name="cargo_type" type="text" data-field data-label="Cargo type" required>
+            </div>
+            <div class="field">
+              <label for="rfq-weight">Weight / volume</label>
+              <input id="rfq-weight" name="cargo_weight" type="text" data-field data-label="Weight / volume" placeholder="e.g. 1.5 tons / 12 m3" required>
+            </div>
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="rfq-mode">Mode</label>
+              <select id="rfq-mode" name="mode" data-field data-label="Mode" required>
+                <option value="">Select</option>
+                <option>Air</option>
+                <option>Sea</option>
+                <option>Road</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="rfq-urgency">Urgency</label>
+              <select id="rfq-urgency" name="urgency" data-field data-label="Urgency" required>
+                <option value="">Select</option>
+                <option>Standard</option>
+                <option>Urgent</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="wizard-step" data-step="3">
+          <h3>Scheduling and handling</h3>
+          <div class="field-grid">
+            <div class="field">
+              <label for="rfq-ready-date">Ready date</label>
+              <input id="rfq-ready-date" name="ready_date" type="date" data-field data-label="Ready date">
+            </div>
+            <div class="field">
+              <label for="rfq-handling">Special handling</label>
+              <input id="rfq-handling" name="special_handling" type="text" data-field data-label="Special handling" placeholder="Temperature control, hazmat, fragile">
+            </div>
+          </div>
+          <div class="field">
+            <label for="rfq-notes">Notes</label>
+            <textarea id="rfq-notes" name="notes" rows="4" data-field data-label="Notes" placeholder="Anything else we should know?"></textarea>
+          </div>
+        </div>
+
+        <div class="wizard-step" data-step="4">
+          <h3>Review your RFQ</h3>
+          <p class="section-lead">We will email a structured quote and recommended next steps.</p>
+          <pre class="rfq-summary" data-summary>Complete the fields to preview your RFQ.</pre>
+        </div>
+
+        <div class="wizard-actions">
+          <button class="btn ghost" type="button" data-back>Back</button>
+          <button class="btn primary" type="button" data-next>Next</button>
+          <button class="btn primary" type="submit" data-submit>Submit RFQ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">FAQ</p>
+      <h2>Questions we hear often</h2>
+      <p class="section-lead">{{ .Site.Params.faqLead }}</p>
+    </div>
+    <div class="faq-grid">
+      {{ range .Site.Params.faqs }}
+      <details class="faq-item">
+        <summary>{{ .question }}</summary>
+        <p>{{ .answer }}</p>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section-contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <p class="kicker">Contact</p>
+      <h2>Let's build your RFQ workflow</h2>
+      <p class="section-lead">{{ .Site.Params.contactLead }}</p>
+      <div class="contact-details">
+        <p><strong>Email:</strong> <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></p>
+        <p><strong>Phone:</strong> <a href="tel:{{ .Site.Params.contactPhone }}">{{ .Site.Params.contactPhone }}</a></p>
+        <p><strong>Location:</strong> {{ .Site.Params.contactAddress }}</p>
+      </div>
+    </div>
+    <form class="contact-form" action="{{ .Site.Params.formspreeEndpoint }}" method="POST">
+      <input type="hidden" name="_subject" value="New Contact Request">
+      <div class="field">
+        <label for="contact-name">Full name</label>
+        <input id="contact-name" name="name" type="text" required>
+      </div>
+      <div class="field-grid">
+        <div class="field">
+          <label for="contact-email">Work email</label>
+          <input id="contact-email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="contact-company">Company</label>
+          <input id="contact-company" name="company" type="text">
+        </div>
+      </div>
+      <div class="field">
+        <label for="contact-topic">What can we help with?</label>
+        <select id="contact-topic" name="topic">
+          <option>RFQ workflow automation</option>
+          <option>Cloud infrastructure</option>
+          <option>Systems integration</option>
+          <option>General inquiry</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="5" required></textarea>
+      </div>
+      <button class="btn primary" type="submit">Send message</button>
+      <p class="form-note">We respond within 1-2 business days.</p>
+    </form>
   </div>
 </section>
 

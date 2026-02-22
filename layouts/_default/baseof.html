@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Site.Title }}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" href="/images/eromlabs-logo.png" type="image/png">
 </head>
@@ -23,7 +26,10 @@
     </button>
     <nav>
       <ul class="navbar-nav">
-        <li><a href="#services">Solutions</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#rfq">RFQ</a></li>
+        <li><a href="/case-studies/">Case Studies</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -38,5 +44,6 @@
       <p class="company-number">Company No. {{ .Site.Params.companyNumber }}</p>
     </div>
   </footer>
+  <script src="/js/main.js"></script>
 </body>
 </html>
