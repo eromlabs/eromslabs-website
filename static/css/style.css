@@ -318,6 +318,26 @@ section {
   color: var(--white);
 }
 
+.band {
+  padding: 3.5rem 0;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.band-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.band-text {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 720px;
+}
+
 .page-hero {
   padding: 8rem 0 4rem;
   background: linear-gradient(135deg, #0b0f1a 0%, #13263e 55%, #0e3d42 100%);
@@ -824,6 +844,7 @@ footer .company-number {
 @media (max-width: 980px) {
   .hero-inner,
   .about-grid,
+  .band-inner,
   .rfq-grid,
   .contact-grid {
     grid-template-columns: 1fr;

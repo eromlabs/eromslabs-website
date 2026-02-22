@@ -83,7 +83,7 @@
       if (value) lines.push(`${label}: ${value}`);
     });
 
-    const summary = lines.length ? lines.join('\n') : 'Complete the fields to preview your RFQ.';
+    const summary = lines.length ? lines.join('\n') : 'Complete the fields to preview your pilot request.';
     summaryEl.textContent = summary;
     if (summaryInput) summaryInput.value = summary;
   };

@@ -4,39 +4,40 @@ title = 'Erom Labs Ltd'
 disableKinds = ['taxonomy', 'term']
 
 [params]
-  description = 'Automation systems and cloud engineering for logistics and freight operations.'
-  headline = 'Logistics RFQ automation and cloud systems, built to move freight faster.'
-  heroSummary = 'We design RFQ workflows, integrations, and cloud platforms that cut response times, remove manual steps, and keep freight teams in control.'
-  heroPill = 'Logistics automation studio'
-  ctaPrimaryText = 'Start an RFQ'
+  description = 'Automation systems and cloud engineering for operations-heavy businesses.'
+  headline = 'Automation systems and cloud platforms that keep operations moving.'
+  heroSummary = 'We build workflow automation, integrations, and cloud infrastructure that remove manual steps and accelerate decisions.'
+  heroPill = 'Automation + Cloud Studio'
+  ctaPrimaryText = 'View pilot'
   ctaPrimaryLink = '#rfq'
   ctaSecondaryText = 'Talk to us'
   ctaSecondaryLink = '#contact'
   solutionsKicker = 'Solutions'
-  solutionsLead = 'We focus on high-impact automation that reduces turnaround time and keeps stakeholders aligned across sales, operations, and carrier partners.'
-  industriesLead = 'Freight workflows touch multiple industries. We bring a logistics-first mindset and cloud automation expertise to each one.'
+  solutionsLead = 'We focus on high-impact automation that reduces turnaround time and keeps stakeholders aligned across operations, sales, and delivery teams.'
+  industriesLead = 'We bring a systems-first automation mindset across logistics, energy, financial services, and professional services.'
   processKicker = 'Delivery approach'
-  processLead = 'A short, structured engagement designed to get a working RFQ flow into production quickly.'
+  processLead = 'A short, structured engagement designed to get a working automation flow into production quickly.'
   highlightsLead = 'Selected outcomes from founder-led engagements delivered prior to Erom Labs.'
-  rfqLead = 'Submit your RFQ details and we will respond by email with a structured quote template and recommended next steps.'
+  rfqLead = 'This pilot demonstrates intake, validation, and routing patterns we reuse across industries.'
   faqLead = 'Short answers to common questions about timing, tooling, and how we work.'
-  contactLead = 'Tell us about your RFQ workflow goals and we will map out the next steps.'
+  contactLead = 'Tell us about your automation or integration goals and we will map out the next steps.'
   companyNumber = '16993036'
   contactEmail = 'info@eromlabs.com'
   contactPhone = '+44 7944961772'
   contactAddress = 'Welwyn Garden City, Hertfordshire, United Kingdom'
   formspreeEndpoint = 'https://formspree.io/f/xbdazwpz'
+  multiIndustryText = 'We build for multiple industries. Current pilot: RFQ workflow for a logistics operator, with the same automation framework applied to finance, energy, and professional services.'
 
   proofPoints = [
-    'UK-registered consultancy focused on logistics automation',
+    'UK-registered automation and cloud consultancy',
     'Founder brings 12+ years in cloud and workflow engineering',
-    'Specialists in GCP, Kubernetes, and integration-heavy systems'
+    'Current pilot: RFQ workflow automation'
   ]
 
   heroBullets = [
-    'RFQ intake, validation, and routing',
-    'Carrier response tracking and SLA visibility',
-    'ERP/CRM integrations and analytics'
+    'Workflow automation and orchestration',
+    'Systems integration across ERP, CRM, and data platforms',
+    'Cloud reliability and observability'
   ]
 
   [[params.stats]]
@@ -50,31 +51,31 @@ disableKinds = ['taxonomy', 'term']
     value = '40-60% less'
 
   [[params.services]]
-    title = 'RFQ Workflow Automation'
-    description = 'Design and build an RFQ flow that captures details once, routes to the right team, and produces consistent quote-ready data.'
-    deliverables = ['RFQ intake & validation', 'Routing rules & SLA visibility', 'Quote template generation']
+    title = 'Workflow Automation'
+    description = 'Automate RFQ, procurement, and operations workflows that capture data once and keep teams aligned.'
+    deliverables = ['Workflow design & validation', 'Routing rules & SLA visibility', 'Automated templates']
 
   [[params.services]]
-    title = 'Freight Systems Integration'
-    description = 'Connect ERPs, CRMs, TMS platforms, and carrier data into a single operational view without manual handoffs.'
+    title = 'Systems Integration'
+    description = 'Connect ERPs, CRMs, TMS platforms, and data sources into a single operational view without manual handoffs.'
     deliverables = ['API & EDI integration', 'Data normalization', 'Operational dashboards']
 
   [[params.services]]
     title = 'Cloud Reliability & DevOps'
-    description = 'Build secure, observable infrastructure that keeps RFQ and quoting systems available under load.'
+    description = 'Build secure, observable infrastructure that keeps workflow and customer-facing systems available under load.'
     deliverables = ['GCP architecture', 'CI/CD & IaC', 'Security & monitoring']
 
   industries = [
-    'Freight & logistics operators',
-    'Energy & industrial supply chains',
+    'Professional services firms',
     'Financial services operations',
-    'Professional services firms'
+    'Logistics & supply chain operators',
+    'Energy & industrial supply chains'
   ]
 
   [[params.processSteps]]
     step = '01'
     title = 'Discover'
-    description = 'Map the current RFQ flow, systems, and handoffs to uncover bottlenecks and data gaps.'
+    description = 'Map the current workflow, systems, and handoffs to uncover bottlenecks and data gaps.'
 
   [[params.processSteps]]
     step = '02'
@@ -84,14 +85,14 @@ disableKinds = ['taxonomy', 'term']
   [[params.processSteps]]
     step = '03'
     title = 'Automate'
-    description = 'Build the RFQ intake, routing, and reporting with clear ownership and audit trails.'
+    description = 'Build the workflow intake, routing, and reporting with clear ownership and audit trails.'
 
   [[params.processSteps]]
     step = '04'
     title = 'Measure'
     description = 'Track turnaround time, response quality, and capacity to continuously improve.'
 
-  aboutLead = 'Erom Labs is a newly formed UK consultancy focused on freight operations automation. While the company is new, the founder has delivered complex cloud and workflow transformations across logistics, banking, and telecom environments.'
+  aboutLead = 'Erom Labs is a newly formed UK consultancy focused on automation and cloud systems for operations-heavy industries. While the company is new, the founder has delivered complex cloud and workflow transformations across logistics, banking, and telecom environments.'
   aboutPoints = [
     'UK-registered, delivery teams in the UK and Nigeria',
     '12+ years in automation and cloud operations',
@@ -136,18 +137,22 @@ disableKinds = ['taxonomy', 'term']
     outcome = 'Outcome: faster rollout readiness with improved cross-team delivery alignment.'
 
   rfqBenefits = [
-    'A structured RFQ template prepared by our team',
-    'Estimated scope, timeline, and integration requirements',
-    'Clear next steps for a pilot or discovery workshop'
+    'Preview a structured RFQ workflow template',
+    'See required data fields and integration points',
+    'Get a pilot plan and next steps'
   ]
 
   [[params.faqs]]
-    question = 'How quickly can an RFQ workflow be live?'
+    question = 'How quickly can a workflow pilot be live?'
     answer = 'A discovery-to-pilot engagement typically takes 4-6 weeks, depending on integrations and data readiness.'
 
   [[params.faqs]]
     question = 'Do you integrate with existing TMS or ERP tools?'
     answer = 'Yes. We design around your existing systems and can integrate via API, EDI, or structured data exports.'
+
+  [[params.faqs]]
+    question = 'Is this only for logistics teams?'
+    answer = 'No. The current pilot is in logistics, but we build automation for finance, energy, and professional services teams as well.'
 
   [[params.faqs]]
     question = 'Can you support multi-region operations?'

@@ -43,7 +43,7 @@
   <div class="container">
     <div class="section-head">
       <p class="kicker">{{ .Site.Params.solutionsKicker }}</p>
-      <h2>Solutions built for freight operations</h2>
+      <h2>Solutions for operations-heavy teams</h2>
       <p class="section-lead">{{ .Site.Params.solutionsLead }}</p>
     </div>
     <div class="cards-grid">
@@ -83,7 +83,7 @@
   <div class="container">
     <div class="section-head">
       <p class="kicker">{{ .Site.Params.processKicker }}</p>
-      <h2>From discovery to a live RFQ flow</h2>
+      <h2>From discovery to a live automation workflow</h2>
       <p class="section-lead">{{ .Site.Params.processLead }}</p>
     </div>
     <div class="process-grid">
@@ -122,33 +122,21 @@
   </div>
 </section>
 
-<section class="section section-muted" id="highlights">
-  <div class="container">
-    <div class="section-head">
-      <p class="kicker">Representative experience</p>
-      <h2>Founder engagement highlights (anonymized)</h2>
-      <p class="section-lead">{{ .Site.Params.highlightsLead }}</p>
+<section class="section band" id="multi-industry">
+  <div class="container band-inner">
+    <div>
+      <p class="kicker">Multi-industry</p>
+      <h2>We build for multiple industries</h2>
     </div>
-    <div class="case-grid">
-      {{ range .Site.Params.highlights }}
-      <article class="case-card">
-        <div class="case-header">
-          <h3>{{ .title }}</h3>
-          <span class="case-tag">Anonymized</span>
-        </div>
-        <p class="case-summary">{{ .summary }}</p>
-        <div class="case-outcome">{{ .outcome }}</div>
-      </article>
-      {{ end }}
-    </div>
+    <p class="band-text">{{ .Site.Params.multiIndustryText }}</p>
   </div>
 </section>
 
 <section class="section section-accent" id="rfq">
   <div class="container">
     <div class="section-head">
-      <p class="kicker">RFQ wizard</p>
-      <h2>Request a freight quote in minutes</h2>
+      <p class="kicker">Pilot spotlight</p>
+      <h2>Pilot spotlight: RFQ workflow automation</h2>
       <p class="section-lead">{{ .Site.Params.rfqLead }}</p>
     </div>
     <div class="rfq-grid">
@@ -159,10 +147,10 @@
           <li>{{ . }}</li>
           {{ end }}
         </ul>
-        <div class="rfq-note">We respond by email with a tailored scope, timeline, and next steps.</div>
+        <div class="rfq-note">We respond by email with a tailored pilot scope, timeline, and next steps.</div>
       </div>
       <form class="wizard" data-wizard action="{{ .Site.Params.formspreeEndpoint }}" method="POST">
-        <input type="hidden" name="_subject" value="New RFQ Submission">
+        <input type="hidden" name="_subject" value="New Workflow Pilot Request">
         <input type="hidden" name="rfq_summary" id="rfq-summary">
 
         <div class="wizard-progress">
@@ -171,7 +159,7 @@
         </div>
 
         <div class="wizard-step" data-step="1">
-          <h3>Tell us what you need</h3>
+          <h3>Tell us what you want to pilot</h3>
           <div class="field-grid">
             <div class="field">
               <label for="rfq-name">Full name</label>
@@ -191,7 +179,7 @@
             </div>
           </div>
           <div class="option-group">
-            <p class="option-label">I'm looking for</p>
+            <p class="option-label">Workflow pilot</p>
             <label class="option">
               <input type="radio" name="request_type" value="RFQ" data-field data-label="Request type" checked>
               RFQ workflow
@@ -267,9 +255,9 @@
         </div>
 
         <div class="wizard-step" data-step="4">
-          <h3>Review your RFQ</h3>
-          <p class="section-lead">We will email a structured quote and recommended next steps.</p>
-          <pre class="rfq-summary" data-summary>Complete the fields to preview your RFQ.</pre>
+          <h3>Review your pilot request</h3>
+          <p class="section-lead">We will email a structured pilot scope and recommended next steps.</p>
+          <pre class="rfq-summary" data-summary>Complete the fields to preview your pilot request.</pre>
         </div>
 
         <div class="wizard-actions">
@@ -278,6 +266,28 @@
           <button class="btn primary" type="submit" data-submit>Submit RFQ</button>
         </div>
       </form>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted" id="highlights">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Representative experience</p>
+      <h2>Founder engagement highlights (anonymized)</h2>
+      <p class="section-lead">{{ .Site.Params.highlightsLead }}</p>
+    </div>
+    <div class="case-grid">
+      {{ range .Site.Params.highlights }}
+      <article class="case-card">
+        <div class="case-header">
+          <h3>{{ .title }}</h3>
+          <span class="case-tag">Anonymized</span>
+        </div>
+        <p class="case-summary">{{ .summary }}</p>
+        <div class="case-outcome">{{ .outcome }}</div>
+      </article>
+      {{ end }}
     </div>
   </div>
 </section>
