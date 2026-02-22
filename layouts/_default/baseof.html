@@ -26,12 +26,12 @@
     </button>
     <nav>
       <ul class="navbar-nav">
-        <li><a href="#solutions">Solutions</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#rfq">RFQ</a></li>
+        <li><a href="{{ if .IsHome }}#solutions{{ else }}/#solutions{{ end }}">Solutions</a></li>
+        <li><a href="{{ if .IsHome }}#process{{ else }}/#process{{ end }}">Process</a></li>
+        <li><a href="{{ if .IsHome }}#rfq{{ else }}/#rfq{{ end }}">RFQ</a></li>
         <li><a href="/case-studies/">Case Studies</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="{{ if .IsHome }}#about{{ else }}/#about{{ end }}">About</a></li>
+        <li><a href="{{ if .IsHome }}#contact{{ else }}/#contact{{ end }}">Contact</a></li>
       </ul>
     </nav>
   </header>
